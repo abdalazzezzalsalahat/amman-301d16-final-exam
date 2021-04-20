@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header></header>
+
+    <div class="con">
+        <% data.forEach(info => { %>
+            <div class="card">
+                <h2>hello I am <% info.character %></h2>
+                <img src="<% info.image %>" alt="<% info.character %>">
+                <h3><% info.quote %></h3>
+                <h3><% info.characterDirection %></h3>
+                <form action="/myFavorites/?_method=Delete" method="POST">
+                    <input type="submit" value="Delete quote">
+                </form>
+            </div>
+        <% }); %>
+    </div>
+
+    <footer></footer>
+</body>
+</html>
